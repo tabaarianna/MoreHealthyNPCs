@@ -1,4 +1,4 @@
-public interface IHealth
+﻿public interface IHealth
 {
     event System.Action<float> OnHPPctChanged;
     event System.Action<float> OnPoison;

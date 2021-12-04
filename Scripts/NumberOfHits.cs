@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,11 +6,11 @@ using UnityEngine;
 public class NumberOfHits : MonoBehaviour, IHealth
 {
     [SerializeField]
-    private int healthInHits = 20; //15
-
+    private int healthInHits = 15;
+    
     [SerializeField]
-    private int poisonDMG = 5; //2
-
+    private int poisonDMG = 2;
+    
     [SerializeField]
     private float poisonTime = 1f;
 
@@ -46,7 +46,7 @@ public class NumberOfHits : MonoBehaviour, IHealth
             OnHPPctChanged(CurrentHPPct);
         }
 
-        if (canTakePoisonDmg)
+        if(canTakePoisonDmg)
         {
             StartCoroutine(Poison());
         }
